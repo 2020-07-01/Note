@@ -65,6 +65,7 @@ function CreateXmlHttp() {
 }
 ```
 
+
 实现Ajax的基本步骤：
     (1)创建XMLHTTPRequest对象，也就是创建一个异步调用对象
     (2)创建一个新的HTTP请求，并指定该HTTP请求的方法、URL、以及验证信息
