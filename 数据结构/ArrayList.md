@@ -256,11 +256,11 @@ private void fastRemove(int index) {
 
 
 总结：
-1.添加元素到末尾，时间复杂度为O(1)
-2.添加元素到指定的位置，中间时比较慢O(n)，尾部时比较快O(1)
-3.删除元素，中间时比较慢O(n)，尾部时比较快O(1)
-4.ArrayList内部使用数组进行存储，支持数组的扩容，每次扩容为原来得1.5倍，不支持缩容
-5.支持随机访问，时间复杂度为O(1)
-6.ArrayList支持求并集，addAll(Collection c)方法
-7.ArrayList支持求交集，retain(Collection c)方法
-8.ArrayList支持求差集，removeAll(Collection c)方法
+1. 添加元素到末尾，时间复杂度为O(1)
+2. 添加元素到指定的位置，中间时比较慢O(n)，尾部时比较快O(1)
+3. 删除元素，中间时比较慢O(n)，尾部时比较快O(1)
+4. ArrayList内部使用数组进行存储，支持数组的扩容，每次扩容为原来得1.5倍，不支持缩容
+5. 支持随机访问，时间复杂度为O(1)
+6. ArrayList支持求并集，addAll(Collection c)方法
+7. ArrayList支持求交集，retain(Collection c)方法
+8. ArrayList支持求差集，removeAll(Collection c)方法
