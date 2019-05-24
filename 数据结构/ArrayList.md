@@ -1,4 +1,3 @@
-
 <!-- TOC -->
 
 1. [1. 简介](#1-%E7%AE%80%E4%BB%8B)
@@ -9,9 +8,9 @@
    3. [3.3. add(E e)方法](#33-adde-e%E6%96%B9%E6%B3%95)
    4. [3.4. remove(int index)](#34-removeint-index)
    5. [3.5. remove(Object o)](#35-removeobject-o)
+4. [总结：](#%E6%80%BB%E7%BB%93)
 
 <!-- /TOC -->
-
 # 1. 简介
 
 ArrayList是一种以数组实现的list，与数组相比，他具有 **动态扩展**的能力，因此称为动态数组。
@@ -23,7 +22,6 @@ ArrayList是一种以数组实现的list，与数组相比，他具有 **动态�
 2.ArrayList实现了RandomAccess，提供了随机访问的能力
 3.ArrayList实现了Cloneable接口，可以被克隆
 4.ArrayList实现了Serializable，可以被序列化
-
 
 # 3. 源码解析
 ## 3.1. 属性
@@ -255,12 +253,11 @@ private void fastRemove(int index) {
 2.进行快速删除
 
 
-总结：
-1.添加元素到末尾，时间复杂度为O(1)
-2.添加元素到指定的位置，中间时比较慢O(n)，尾部时比较快O(1)
-3.删除元素，中间时比较慢O(n)，尾部时比较快O(1)
-4.ArrayList内部使用数组进行存储，支持数组的扩容，每次扩容为原来得1.5倍，不支持缩容
-5.支持随机访问，时间复杂度为O(1)
-6.ArrayList支持求并集，addAll(Collection c)方法
-7.ArrayList支持求交集，retain(Collection c)方法
-8.ArrayList支持求差集，removeAll(Collection c)方法
+# 总结：
+1. 添加元素到末尾，时间复杂度为O(1)
+2. 添加元素到指定的位置，中间时比较慢O(n)，尾部时比较快O(1)
+3. 删除元素，中间时比较慢O(n)，尾部时比较快O(1)
+4. ArrayList内部使用数组进行存储，支持数组的扩容，每次扩容为原来得1.5倍，不支持缩容
+5. 支持随机访问，时间复杂度为O(1)，并且使用for()循环进行访问的速度优于迭代
+6. fail-fast：在多线程环境下，如果一个线程在遍历集合的时候，该集合被其他线程改变了，则此线程抛出异常。
+   1. 在访问之后会进行modCount的检查，做前后值对比，如果这个值改变则说明集合被其他线程操作过，则抛出异常

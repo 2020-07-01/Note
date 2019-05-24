@@ -1,22 +1,24 @@
 <!-- TOC -->
 
 1. [1. 简介](#1-%E7%AE%80%E4%BB%8B)
-2. [2. 继承体系](#2-%E7%BB%A7%E6%89%BF%E4%BD%93%E7%B3%BB)
-3. [3. 源码解析](#3-%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90)
-   1. [3.1. 属性](#31-%E5%B1%9E%E6%80%A7)
-   2. [3.2. 构造方法](#32-%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95)
-   3. [3.3. add()方法](#33-add%E6%96%B9%E6%B3%95)
-   4. [3.4. add(int index, E element)](#34-addint-index-e-element)
-   5. [3.5. get(int index)方法](#35-getint-index%E6%96%B9%E6%B3%95)
-   6. [3.6. size()方法](#36-size%E6%96%B9%E6%B3%95)
-4. [4. 总结](#4-%E6%80%BB%E7%BB%93)
+2. [2. 存储结构](#2-%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84)
+3. [3. 继承体系](#3-%E7%BB%A7%E6%89%BF%E4%BD%93%E7%B3%BB)
+4. [4. 源码解析](#4-%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90)
+   1. [4.1. 属性](#41-%E5%B1%9E%E6%80%A7)
+   2. [4.2. 构造方法](#42-%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95)
+   3. [4.3. add()方法](#43-add%E6%96%B9%E6%B3%95)
+   4. [4.4. add(int index, E element)](#44-addint-index-e-element)
+   5. [4.5. get(int index)方法](#45-getint-index%E6%96%B9%E6%B3%95)
+   6. [4.6. size()方法](#46-size%E6%96%B9%E6%B3%95)
+5. [5. 总结](#5-%E6%80%BB%E7%BB%93)
 
 <!-- /TOC -->
-
 # 1. 简介
-CopyOnWriteArrayList是 **ArrayList的线程安全版本，内部也是通过数组来实现的，每次对数组的操作都是通过拷贝一份新的数组来实现，修改完了再替换掉老的数组，**
+CopyOnWriteArrayList是 ArrayList的线程安全版本，内部也是通过数组来实现的，**每次对数组的操作都是通过拷贝一份新的数组来实现，修改完了再替换掉老的数组**
 
-# 2. 继承体系
+# 2. 存储结构
+CopyOnWriteArrayList底层是 **数组**实现
+# 3. 继承体系
 ![Alt](https://img-blog.csdnimg.cn/20190331151449459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Rhbmd0b25nMQ==,size_16,color_FFFFFF,t_70)
 
 1.CopyOnWriteArrayList实现了List，提供了基础的添加、删除、遍历等操作。
@@ -28,8 +30,8 @@ CopyOnWriteArrayList是 **ArrayList的线程安全版本，内部也是通过数
 4.CopyOnWriteArrayList实现了Serializable，可以被序列化
 
 
-# 3. 源码解析
-## 3.1. 属性
+# 4. 源码解析
+## 4.1. 属性
 ```java
 
 //修改时加锁
@@ -42,7 +44,7 @@ private transient volatile Object[] array;
 1.Lock：用于修改时进行加锁
 2.array：真正存储元素的地方，volatile表示一个线程对这个字段的修改对另一个线程是可见的
 
-## 3.2. 构造方法
+## 4.2. 构造方法
 
 1.CopyOnWriteArrayList()
 创建空的数组
@@ -57,7 +59,7 @@ final void setArray(Object[] a) {
     array = a;
 }
 ```
-2. CopyOnWriteArrayList(Collection<? extends E> c)
+1. CopyOnWriteArrayList(Collection<? extends E> c)
 
 ```java
  public CopyOnWriteArrayList(Collection<? extends E> c) {
@@ -86,7 +88,7 @@ public CopyOnWriteArrayList(E[] toCopyIn) {
 
 ```
 
-## 3.3. add()方法
+## 4.3. add()方法
 添加元素到末尾,时间复杂读O(1)
 ```java
 public boolean add(E e) {
@@ -119,7 +121,7 @@ public boolean add(E e) {
 4.把新的数组赋值给当前的array属性，覆盖原数组
 5.解锁
 
-## 3.4. add(int index, E element)
+## 4.4. add(int index, E element)
 添加元素到指定的位置，时间复杂度O(n)
 ```java
 public void add(int index, E element) {
@@ -164,7 +166,7 @@ public void add(int index, E element) {
 6.把新数组赋值给当前对象的array属性，覆盖原数组；
 7.解锁
 
-## 3.5. get(int index)方法
+## 4.5. get(int index)方法
 获取指定索引的元素，支持随机访问，时间复杂度为O(1)
 ```java
 //获取元素不需要进行加锁
@@ -182,7 +184,7 @@ private E get(Object[] a, int index) {
 1.获取元素数组
 2.获取指定位置处的元素
 
-## 3.6. size()方法
+## 4.6. size()方法
 返回数组的长度
 ```java
 //不加锁
@@ -191,13 +193,11 @@ public int size() {
 }
 ```
 
-
-
-# 4. 总结
-1.CopyOnWriteArrayList使用ReentrantLock重入锁，保证线程的安全
-2.CopyOnWriteArrayList的写操作都要先拷贝一份新数组，在新的数组中作修改，修改结束后用新数组代替老的数组，所以空间复杂度为O(n),性能地下。
-3.CopyOnWriteArrayList读操作支持随机访问，时间复杂度为O(1)
-4.CopyOnWriteArrayList采用读写分离的思想，读操作不加锁，写操作加锁，写操作占用较大的内存空间，适合读多写少的场合。
-5.CopyOnWriteArrayList只能保证最终的一致性，不能保证实时一致性。
-6.每次进行添加元素的操作的时候，都是先copy一个arra
-y.length+1的大小的新数组，刚好可以存储目标元素，因此不需要size属性。
+# 5. 总结
+1. CopyOnWriteArrayList使用 **ReentrantLock**重入锁，保证线程的安全
+2. CopyOnWriteArrayList的写操作都要先拷贝一份新数组，在新的数组中作修改，修改结束后用新数组代替老的数组，所以空间复杂度为O(n),性能地下。
+3. CopyOnWriteArrayList读操作支持随机访问，时间复杂度为O(1)
+4. CopyOnWriteArrayList采用读写分离的思想，读操作不加锁，写操作加锁，写操作占用较大的内存空间，适合读多写少的场合。
+5. CopyOnWriteArrayList只能保证最终的一致性，不能保证实时一致性。
+6. 每次进行添加元素的操作的时候，都是先copy一个array.length+1的大小的新数组，刚好可以存储目标元素，因此不需要size属性。
+7. 强一致性：指的是修改后的数据能被后面额访问者可以看到；弱一致性指的是修改过的数据后面的访问者不能看到；最终一致性指的是修改后的数据，后面的访问者在一段时间后才能访问到更新后的数据。
