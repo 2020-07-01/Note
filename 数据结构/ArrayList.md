@@ -8,18 +8,18 @@
    3. [3.3. add(E e)方法](#33-adde-e%E6%96%B9%E6%B3%95)
    4. [3.4. remove(int index)](#34-removeint-index)
    5. [3.5. remove(Object o)](#35-removeobject-o)
-4. [总结：](#%E6%80%BB%E7%BB%93)
+4. [4. 总结](#4-%E6%80%BB%E7%BB%93)
+5. [5. 附加：关于序列化](#5-%E9%99%84%E5%8A%A0%E5%85%B3%E4%BA%8E%E5%BA%8F%E5%88%97%E5%8C%96)
 
 <!-- /TOC -->
 # 1. 简介
-
-ArrayList是一种以数组实现的list，与数组相比，他具有 **动态扩展**的能力，因此称为动态数组。
+ArrayList是底层为数组实现的list，与数组相比，他具有 **动态扩展**的能力。
 
 # 2. 继承体系
 ![Alt](https://img-blog.csdnimg.cn/20190329160747473.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Rhbmd0b25nMQ==,size_16,color_FFFFFF,t_70)
 
 1.ArrayList实现了List接口，提供了基础的添加，删除，遍历等操作
-2.ArrayList实现了RandomAccess，提供了随机访问的能力
+2.ArrayList实现了RandomAccess，提供了随机访问的能力，具有随机访问能力的数据结构，其for循环其迭代速度快。
 3.ArrayList实现了Cloneable接口，可以被克隆
 4.ArrayList实现了Serializable，可以被序列化
 
@@ -252,23 +252,24 @@ private void fastRemove(int index) {
 1.遍历数组，找到元素的下标
 2.进行快速删除
 
-
-<<<<<<< HEAD
-# 总结：
-=======
-总结：
->>>>>>> 8c89e494bf02eaaf7406d846279b689ce54aedd3
+# 4. 总结
 1. 添加元素到末尾，时间复杂度为O(1)
 2. 添加元素到指定的位置，中间时比较慢O(n)，尾部时比较快O(1)
 3. 删除元素，中间时比较慢O(n)，尾部时比较快O(1)
 4. ArrayList内部使用数组进行存储，支持数组的扩容，每次扩容为原来得1.5倍，不支持缩容
-<<<<<<< HEAD
 5. 支持随机访问，时间复杂度为O(1)，并且使用for()循环进行访问的速度优于迭代
 6. fail-fast：在多线程环境下，如果一个线程在遍历集合的时候，该集合被其他线程改变了，则此线程抛出异常。
    1. 在访问之后会进行modCount的检查，做前后值对比，如果这个值改变则说明集合被其他线程操作过，则抛出异常
-=======
-5. 支持随机访问，时间复杂度为O(1)
-6. ArrayList支持求并集，addAll(Collection c)方法
-7. ArrayList支持求交集，retain(Collection c)方法
-8. ArrayList支持求差集，removeAll(Collection c)方法
->>>>>>> 8c89e494bf02eaaf7406d846279b689ce54aedd3
+5. 支持随机访问，时间复杂度为O(1)，for循环比iterator迭代速度更快。
+6. ArrayList扩容机制：扩容为原速度的1.5倍
+
+ 
+# 5. 附加：关于序列化
+
+1. 首先什么是序列化？
+序列化的实质就是将对象的信息转换为另一种形式，存储在磁盘之上，或者可以在网络之间进行传输。
+2. 其次如何进行序列化和防止序列化？
+将需要被序列化对象实现Serializable标记接口，然后有些对象是不需要被序列化的，因此可以使用transient修饰为不可序列化的类型。
+3. ArrayList中elementData被修饰为transient，他的元素如何被序列化？
+定义私有的writeObject()和readObject()方法进行序列化
+优点：可以将ArrayList中实际存在的size个元素进行序列化，而不是将初始化的length个元素进行序列化，以减少空间的占用。
