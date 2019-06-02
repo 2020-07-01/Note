@@ -18,6 +18,7 @@ CopyOnWriteArrayList是 ArrayList的线程安全版本，内部也是通过数�
 
 # 2. 存储结构
 CopyOnWriteArrayList底层是 **数组**实现
+
 # 3. 继承体系
 ![Alt](https://img-blog.csdnimg.cn/20190331151449459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Rhbmd0b25nMQ==,size_16,color_FFFFFF,t_70)
 
@@ -199,5 +200,5 @@ public int size() {
 3. CopyOnWriteArrayList读操作支持随机访问，时间复杂度为O(1)
 4. CopyOnWriteArrayList采用读写分离的思想，读操作不加锁，写操作加锁，写操作占用较大的内存空间，适合读多写少的场合。
 5. CopyOnWriteArrayList只能保证最终的一致性，不能保证实时一致性。
-6. 每次进行添加元素的操作的时候，都是先copy一个array.length+1的大小的新数组，刚好可以存储目标元素，因此不需要size属性。
+6. 扩容机制：每次进行添加元素的操作的时候，都是先copy一个array.length+1的大小的新数组，刚好可以存储目标元素，因此不需要size属性。
 7. 强一致性：指的是修改后的数据能被后面额访问者可以看到；弱一致性指的是修改过的数据后面的访问者不能看到；最终一致性指的是修改后的数据，后面的访问者在一段时间后才能访问到更新后的数据。
