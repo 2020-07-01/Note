@@ -18,10 +18,10 @@ ArrayList是底层为数组实现的list，与数组相比，他具有 **动态�
 # 2. 继承体系
 ![Alt](https://img-blog.csdnimg.cn/20190329160747473.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Rhbmd0b25nMQ==,size_16,color_FFFFFF,t_70)
 
-1.ArrayList实现了List接口，提供了基础的添加，删除，遍历等操作
-2.ArrayList实现了RandomAccess，提供了随机访问的能力，具有随机访问能力的数据结构，其for循环其迭代速度快。
-3.ArrayList实现了Cloneable接口，可以被克隆
-4.ArrayList实现了Serializable，可以被序列化
+1. ArrayList实现了List接口，提供了基础的添加，删除，遍历等操作
+2. ArrayList实现了RandomAccess，提供了随机访问的能力，具有随机访问能力的数据结构，其for循环其迭代速度快。
+3. ArrayList实现了Cloneable接口，可以被克隆
+4. ArrayList实现了Serializable，可以被序列化
 
 # 3. 源码解析
 ## 3.1. 属性
@@ -182,11 +182,11 @@ private void rangeCheckForAdd(int index) {
 
 ```
 添加过程：
-1.检查下标是否越界
-2.判断是否扩容
-3.将插入下标后的元素往后移动一位
-4.在指定下标处插入元素
-5.size大小+1
+1. 检查下标是否越界
+2. 判断是否扩容
+3. 将插入下标后的元素往后移动一位
+4. 在指定下标处插入元素
+5. size大小+1
 
 
 ## 3.4. remove(int index)
@@ -211,9 +211,9 @@ public E remove(int index) {
 }
 ```
 删除过程：
-1.检查下标是否越界
-2.将元素从index处向前移动一位进行覆盖
-3.size值-1
+1. 检查下标是否越界
+2. 将元素从index处向前移动一位进行覆盖
+3. size值-1
 
 
 
@@ -249,8 +249,8 @@ private void fastRemove(int index) {
 
 ```
 删除过程:
-1.遍历数组，找到元素的下标
-2.进行快速删除
+1. 遍历数组，找到元素的下标
+2. 进行快速删除
 
 # 4. 总结
 1. 添加元素到末尾，时间复杂度为O(1)
@@ -268,8 +268,11 @@ private void fastRemove(int index) {
 
 1. 首先什么是序列化？
 序列化的实质就是将对象的信息转换为另一种形式，存储在磁盘之上，或者可以在网络之间进行传输。
+
 2. 其次如何进行序列化和防止序列化？
 将需要被序列化对象实现Serializable标记接口，然后有些对象是不需要被序列化的，因此可以使用transient修饰为不可序列化的类型。
+
 3. ArrayList中elementData被修饰为transient，他的元素如何被序列化？
 定义私有的writeObject()和readObject()方法进行序列化
+
 优点：可以将ArrayList中实际存在的size个元素进行序列化，而不是将初始化的length个元素进行序列化，以减少空间的占用。
