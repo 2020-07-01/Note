@@ -305,6 +305,6 @@ final Node<K,V> getNode(int hash, Object key) {
 7. hashMap是非线性安全的容器
 8. HashMap添加查找元素的时间复杂度为O(1)
 9. HashMap支持一个key为null值，多个value为null
-10. HashMap与Object的hashCode方法关系：(面试题)
+10. HashMap与Object的hashCode方法关系：(**面试题**)
     * 每个类都默认继承Object类，Object类为每个类的超类
     * 因此hashMap重写了Object类的hashCode方法
