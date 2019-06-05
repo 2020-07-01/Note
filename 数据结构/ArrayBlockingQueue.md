@@ -66,15 +66,15 @@ public ArrayBlockingQueue(int capacity, boolean fair) {
     notFull =  lock.newCondition();
 }
 ```
-1.ArrayBlockingQueue初始化时必须指定容量
-2.在初始化时可以指定公平锁还是非公平锁
+1. ArrayBlockingQueue初始化时必须指定容量
+2. 在初始化时可以指定公平锁还是非公平锁
 
 ## 4.3. 入队
 入队有四种方法分别为:
-add(E e)：添加成功返回true，队列抛出异常
-offer(E e)：添加成功返回true，否则返回false
-put(E e)：不进行返回，如果队列满了则进行阻塞等待
-offer(E e,long timeout,TimeUnit unit)：可以设置等待时间，在数组满了进行等待，时间到了队列依然满则返回false
+* add(E e)：添加成功返回true，队列抛出异常
+* offer(E e)：添加成功返回true，否则返回false
+* put(E e)：不进行返回，如果队列满了则进行阻塞等待
+* offer(E e,long timeout,TimeUnit unit)：可以设置等待时间，在数组满了进行等待，时间到了队列依然满则返回false
 
 ```java
 
@@ -177,8 +177,8 @@ public boolean offer(E e, long timeout, TimeUnit unit)
 利用存指针循环从队列中存放元素
 
 ## 4.4. 出队
-remove()：如果队列为空则抛出异常
-poll():如果队列为空则返回null，否返回弹出的元素
+* remove()：如果队列为空则抛出异常
+* poll():如果队列为空则返回null，否返回弹出的元素
 ```java
 //删除队列头的元素
 public E remove() {
