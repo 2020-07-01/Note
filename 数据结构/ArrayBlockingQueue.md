@@ -23,7 +23,6 @@ ArrayBlockingQueue是Java并发包下的一个以数组实现的有界阻塞队�
 # 3. 存储结构
 ArrayBlockingQueue的底层实现是确定的容量的数组，采用入队指针与出队指针循环利用数组。
 
-
 # 4. 源码解析
 ## 4.1. 主要属性
 ```java
