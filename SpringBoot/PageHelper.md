@@ -4,11 +4,13 @@
 - [2. 项目中的具体实例：](#2-%e9%a1%b9%e7%9b%ae%e4%b8%ad%e7%9a%84%e5%85%b7%e4%bd%93%e5%ae%9e%e4%be%8b)
 
 <!-- /TOC -->
-在之前学习公司demo的时候使用PageHepler插件进行分页，**但是此插件网上有两种不同的版本**，而且在编码的过程中出现无法进行分页和分页后前端无法进行显示问题，这里进行记录，避免再次踩坑。
 
+前段时间学习公司demo的时候使用PageHepler插件进行分页，**但是此插件网上有两种不同的版本**，而且在编码的过程中出现无法进行分页和分页后前端无法显示问题，这里进行记录，避免再次踩坑。
+
+
+**这里只是记录如何使用PageHelper插件的start方法进行分页，及其配置信息。**
 
 PageHelper插件官方文档： https://pagehelper.github.io/docs/howtouse/
-
 
 # 1. SpringBoot后端开发如何进行分页
 
@@ -25,15 +27,15 @@ PageHelper插件官方文档： https://pagehelper.github.io/docs/howtouse/
             <version>1.2.5</version>
         </dependency>
 
-    <!--pagehelper原生版本-->
-    <dependency>
-        <groupId>com.github.pagehelper</groupId>
-        <artifactId>pagehelper</artifactId>
-        <version>5.1.10</version>
-    </dependency>
+        <!--pagehelper原生版本-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>5.1.10</version>
+        </dependency>
         
 ```
-自己在项目中个使用的是PageHelper的原生版本，但是两个版本在配置上有差异
+自己在项目中个使用的是PageHelper的原生版本
 
 
 * PageHelper
@@ -47,6 +49,19 @@ public class PageHelper extends PageMethod implements Dialect
 
 * dialect：默认情况会使用PageHelper方式进行分页，如果想要实现自己的分页逻辑，可以实现dialect接口进行配置
 
+在使用pagehelper.start()方法进行分页时需要的用到的参数设置
+
+```
+# PageHelper配置信息
+# 分页插件会自动选择相应的数据库，以选择合适的分页方式进行分页，一般情况下不需要设置，插件会自动进行识别，sqlServer需要进行设置
+pagehelper.helper-dialect=mysql
+# page-size-zero默认值为false，当他为true时，如果pageSize为0则会查询全部的结果
+pagehelper.page-size-zero=true
+# reasonable默认为false，此时会根据pageNum的实际参数进行查询，如果为true时，当pageNum<0时查询第一页的数据进行返回，如果pageNum>pages时会查询最后一页进行返回
+pagehelper.reasonable=true
+# 支持通过mapper接口来传递参数进行分页，默认值为false，表示分页插件会从查询方法的参数中，自动根据上面的param进行字段取值，查找到合适的参数进行分页
+pagehelper.support-methods-arguments=false
+```
 
 
 PageInfo的分页方式有很多，此处使用PageHelper的startPage(pageNum, pageSize)方法进行分页，**此方法默认将紧跟在后面的查询语句进行分页**
@@ -142,5 +157,3 @@ public class PageInfo<T> extends PageSerializable<T> {
 ```
 
 
-
-未完。。。
