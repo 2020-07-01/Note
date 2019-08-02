@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="678baa33-6d79-4ff7-9d1d-fb70f9dc0292" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="678baa33-6d79-4ff7-9d1d-fb70f9dc0292" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +51,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -65,7 +63,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -107,6 +105,7 @@
       <workItem from="1563116744564" duration="377000" />
       <workItem from="1563637272958" duration="161000" />
       <workItem from="1563675075361" duration="12000" />
+      <workItem from="1564669214936" duration="418000" />
     </task>
     <task id="LOCAL-00001" summary="坑">
       <created>1562684169063</created>
@@ -129,16 +128,37 @@
       <option name="project" value="LOCAL" />
       <updated>1563637322901</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="spring原理了解">
+      <created>1564669292901</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1564669292901</updated>
+    </task>
+    <task id="LOCAL-00005" summary="PageHelper分页">
+      <created>1564669336765</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1564669336765</updated>
+    </task>
+    <task id="LOCAL-00006" summary="代码规范">
+      <created>1564669350401</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1564669350401</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1678000" />
+    <option name="totallyTimeSpent" value="2096000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="33" width="1850" height="1047" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26707727" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27155656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -175,7 +195,10 @@
     <MESSAGE value="坑" />
     <MESSAGE value="测试" />
     <MESSAGE value="java核心技术卷" />
-    <option name="LAST_COMMIT_MESSAGE" value="java核心技术卷" />
+    <MESSAGE value="spring原理了解" />
+    <MESSAGE value="PageHelper分页" />
+    <MESSAGE value="代码规范" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码规范" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c9da6f1c-6469-40f8-8aa5-789bbb91ebb2/console.sql">
