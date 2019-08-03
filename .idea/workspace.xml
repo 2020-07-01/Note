@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="678baa33-6d79-4ff7-9d1d-fb70f9dc0292" name="Default Changelist" comment="" />
+    <list default="true" id="678baa33-6d79-4ff7-9d1d-fb70f9dc0292" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +32,7 @@
     <leaf />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -52,17 +55,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Note" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Note" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -106,6 +99,7 @@
       <workItem from="1563637272958" duration="161000" />
       <workItem from="1563675075361" duration="12000" />
       <workItem from="1564669214936" duration="418000" />
+      <workItem from="1564760302601" duration="1346000" />
     </task>
     <task id="LOCAL-00001" summary="坑">
       <created>1562684169063</created>
@@ -149,16 +143,30 @@
       <option name="project" value="LOCAL" />
       <updated>1564669350401</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ssh原理">
+      <created>1564760340683</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1564760340683</updated>
+    </task>
+    <task id="LOCAL-00008" summary="PageHelper">
+      <created>1564760359674</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1564760359674</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2096000" />
+    <option name="totallyTimeSpent" value="3442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="33" width="1850" height="1047" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27155656" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27603585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -198,26 +206,14 @@
     <MESSAGE value="spring原理了解" />
     <MESSAGE value="PageHelper分页" />
     <MESSAGE value="代码规范" />
-    <option name="LAST_COMMIT_MESSAGE" value="代码规范" />
+    <MESSAGE value="ssh原理" />
+    <MESSAGE value="PageHelper" />
+    <option name="LAST_COMMIT_MESSAGE" value="PageHelper" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c9da6f1c-6469-40f8-8aa5-789bbb91ebb2/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/在用生命踩坑.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="54">
-            <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/在用生命踩坑.md" />
   </component>
 </project>
