@@ -39,11 +39,14 @@ ssh是一种协议，主要用于安全远程登陆，最常用的实现方式�
 
 使用命令ssh-keygen生成public key和private key<br>
 private key文件为/root/.ssh/id_rsa<br>
-public key文件为/root/.ssh/id_rsa.pub
+public key文件为/root/.ssh/id_rsa.pub<br>
 known_hosts存储的是已经认证的远程主机的host key，
 
 
+
 known_hosts文件的生成：
+
+knoen_hosts文件的位置：/home/qiang/.shh
 
 ![Alt](https://github.com/yq-debug/Note/blob/master/%E5%9B%BE%E7%89%87/know_hosts%E7%9A%84%E7%94%9F%E6%88%90-.png?raw=true)
 

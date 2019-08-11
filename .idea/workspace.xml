@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d37dee5-2328-4e71-b419-ab1fdf871232" name="Default Changelist" comment="" />
+    <list default="true" id="9d37dee5-2328-4e71-b419-ab1fdf871232" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/技术储备/ssh.md" beforeDir="false" afterPath="$PROJECT_DIR$/技术储备/ssh.md" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,8 +47,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -92,16 +97,33 @@
       <option name="project" value="LOCAL" />
       <updated>1564834976007</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9d37dee5-2328-4e71-b419-ab1fdf871232" name="Default Changelist" comment="" />
+      <created>1564906441159</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564906441159</updated>
+      <workItem from="1564906442933" duration="118000" />
+      <workItem from="1565403889288" duration="1792000" />
+      <workItem from="1565526880414" duration="10000" />
+    </task>
+    <task id="LOCAL-00003" summary="mysql字符集的学习">
+      <created>1564906486124</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1564906486124</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196000" />
+    <option name="totallyTimeSpent" value="2116000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="33" width="1850" height="1047" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2805151" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2950728" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -131,9 +153,13 @@
       <window_info active="true" anchor="right" id="Database" order="8" visible="true" weight="0.32978722" />
     </layout>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="规范" />
-    <option name="LAST_COMMIT_MESSAGE" value="规范" />
+    <MESSAGE value="mysql字符集的学习" />
+    <option name="LAST_COMMIT_MESSAGE" value="mysql字符集的学习" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Note.iml">
