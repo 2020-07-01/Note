@@ -89,7 +89,7 @@ chown -R mysql:mysql 3307_mysql
 ```
 在/etc/mysql目录下：
 cp -r conf.d  conf3307.d
-cp my.conf my3307.cnf
+cp my.cnf my3307.cnf
 cp -r mysql.conf.d mysql3307.conf.d
 ```
 
