@@ -5,6 +5,7 @@
       <change afterPath="$PROJECT_DIR$/多线程/ThreadGroup源码解读.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/多线程/Thread源码解析.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据结构/ConcurrentHashMap.md" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,18 +31,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/多线程/ThreadGroup源码解读.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
@@ -69,12 +59,22 @@
             <path>
               <item name="Note" type="b2602c69:ProjectViewProjectNode" />
               <item name="Note" type="462c0819:PsiDirectoryNode" />
+              <item name="Java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Note" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Note" type="462c0819:PsiDirectoryNode" />
               <item name="MySQL" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Note" type="b2602c69:ProjectViewProjectNode" />
               <item name="Note" type="462c0819:PsiDirectoryNode" />
               <item name="多线程" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Note" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Note" type="462c0819:PsiDirectoryNode" />
+              <item name="数据结构" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -92,6 +92,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/数据结构" />
+      <recent name="$PROJECT_DIR$/Java" />
       <recent name="$PROJECT_DIR$/多线程" />
     </key>
   </component>
@@ -136,7 +138,7 @@
       <workItem from="1565526880414" duration="10000" />
       <workItem from="1565533576978" duration="201000" />
       <workItem from="1565962721608" duration="476000" />
-      <workItem from="1567772845125" duration="1189000" />
+      <workItem from="1567772845125" duration="1487000" />
     </task>
     <task id="LOCAL-00003" summary="mysql字符集的学习">
       <created>1564906486124</created>
@@ -173,15 +175,28 @@
       <option name="project" value="LOCAL" />
       <updated>1565963125549</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Object源码解读">
+      <created>1567774670074</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1567774670074</updated>
+    </task>
+    <task id="LOCAL-00009" summary=" Thread源码学习">
+      <created>1567774772559</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1567774772564</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3982000" />
+    <option name="totallyTimeSpent" value="4280000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="33" width="1850" height="1047" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31019038" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -210,7 +225,7 @@
       <window_info anchor="right" id="Maven" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.32978722" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32978722" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +238,10 @@
     <MESSAGE value="文档规范" />
     <MESSAGE value="类加载机制的装载过程" />
     <MESSAGE value="MySQL集群搭建" />
-    <option name="LAST_COMMIT_MESSAGE" value="MySQL集群搭建" />
+    <MESSAGE value="Object源码解读" />
+    <MESSAGE value="ThreadGroup源码学习" />
+    <MESSAGE value=" Thread源码学习" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Thread源码学习" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Note.iml">
@@ -242,10 +260,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Java/Object源码解读.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/数据结构/CurrentHashMap分段锁思想.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/多线程/ThreadGroup源码解读.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Java/类加载机制——装载过程.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1050" />
           <second_editor />
         </state>
       </provider>
